@@ -24,7 +24,7 @@ GOOGLE_FONT_URL = "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@40
 CSS = """
 body {
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.75;
     color: #222;
     max-width: 700px;
@@ -32,14 +32,14 @@ body {
 }
 h1 {
     text-align: center;
-    font-size: 22px;
+    font-size: 26px;
     color: #1a5276;
     border-bottom: 3px solid #2980b9;
     padding-bottom: 10px;
     margin-bottom: 24px;
 }
 h2 {
-    font-size: 15px;
+    font-size: 18px;
     color: #2c3e50;
     border-left: 4px solid #2980b9;
     padding-left: 10px;
@@ -47,7 +47,7 @@ h2 {
     margin-bottom: 8px;
 }
 h3 {
-    font-size: 14px;
+    font-size: 17px;
     color: #2c3e50;
     margin-top: 16px;
     margin-bottom: 6px;
@@ -68,7 +68,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 10px 0;
-    font-size: 12.5px;
+    font-size: 15px;
 }
 th {
     background-color: #2980b9;
@@ -89,7 +89,7 @@ blockquote {
     border-left: 4px solid #f39c12;
     padding: 10px 14px;
     margin: 10px 0;
-    font-size: 12.5px;
+    font-size: 15px;
     color: #7d6608;
 }
 strong {
