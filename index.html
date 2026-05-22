@@ -29,6 +29,9 @@ body {
     font-weight: 900;
     margin-bottom: 8px;
     text-shadow: 0 2px 12px rgba(0,0,0,.18);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.2;
 }
 .subtitle {
     color: rgba(255,255,255,.94);
@@ -36,7 +39,11 @@ body {
     font-weight: 600;
     margin-bottom: 40px;
     text-shadow: 0 1px 6px rgba(0,0,0,.15);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
 }
+.subtitle span { display: inline-block; white-space: nowrap; }
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -111,20 +118,31 @@ body {
 }
 .event-meta span { display: inline-block; margin: 0 12px; }
 @media (max-width: 700px) {
-    .title { font-size: 28px; }
-    .subtitle { font-size: 15px; margin-bottom: 28px; }
+    body { padding: 16px; }
+    .title { font-size: 26px; }
+    .subtitle { font-size: 14px; margin-bottom: 26px; }
     .cards { grid-template-columns: 1fr; gap: 20px; }
     .card { padding: 32px 22px 28px; }
     .card-icon { font-size: 58px; }
     .card-title { font-size: 19px; }
     .event-meta span { display: block; margin: 4px 0; }
 }
+@media (max-width: 400px) {
+    body { padding: 12px; }
+    .title { font-size: 22px; }
+    .subtitle { font-size: 13px; }
+    .card { padding: 26px 18px 22px; }
+    .card-icon { font-size: 48px; }
+    .card-title { font-size: 17px; }
+}
 </style>
 </head>
 <body>
 <div class="container">
     <h1 class="title">小鐵人 — 台3線車訓</h1>
-    <p class="subtitle">5/24（日）｜龍潭大池 ↔ 7-11 騰達門市｜全程 41 km</p>
+    <p class="subtitle">
+      <span>5/24（日）</span>　<span>龍潭大池 ↔ 7-11 騰達門市</span>　<span>全程 41 km</span>
+    </p>
 
     <div class="cards">
         <a href="organizer.html" class="card card-organizer">
