@@ -44,6 +44,7 @@ body {
     line-height: 1.5;
 }
 .subtitle span { display: inline-block; white-space: nowrap; }
+.subtitle span + span::before { content: "　"; }
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -121,7 +122,8 @@ body {
     body { padding: 18px 16px; }
     .title { font-size: 30px; margin-top: 24px; }
     .subtitle { font-size: 15px; margin-bottom: 28px; }
-    .subtitle span { display: block; margin: 3px 0; }
+    .subtitle span { display: block; margin: 0; line-height: 1.2; }
+    .subtitle span + span::before { content: none; }
     .cards { grid-template-columns: 1fr; gap: 16px; }
     .card { padding: 24px 20px 22px; }
     .card-icon { font-size: 50px; margin-bottom: 12px; }
@@ -140,9 +142,7 @@ body {
 <body>
 <div class="container">
     <h1 class="title">小鐵人 — 台3線車訓</h1>
-    <p class="subtitle">
-      <span>5/24（日）</span>　<span>龍潭大池 ↔ 7-11 騰達門市</span>　<span>全程 41 km</span>
-    </p>
+    <p class="subtitle"><span>5/24（日）</span><span>龍潭大池 ↔ 7-11 騰達門市</span><span>全程 41 km</span></p>
 
     <div class="cards">
         <a href="participant.html" class="card card-participant">
