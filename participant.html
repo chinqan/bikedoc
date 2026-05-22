@@ -45,6 +45,22 @@ code { background: #f1f3f5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 .slogan-card ol { margin: 0; padding-left: 22px; }
 .slogan-card li { margin-bottom: 6px; font-weight: 600; font-size: 15px; }
 .sweeper { color: #c0392b; font-weight: 700; background: #fdecea; padding: 2px 8px; border-radius: 4px; white-space: nowrap; display: inline-block; }
+
+/* 摺疊圖片說明 */
+details { margin: 6px 0; display: inline-block; }
+details > summary {
+    cursor: pointer; display: inline-block; padding: 4px 10px;
+    background: #f0f8ff; color: #27ae60; font-weight: 600; font-size: 13px;
+    border: 1px dashed #27ae60; border-radius: 6px;
+    list-style: none; user-select: none;
+}
+details > summary::-webkit-details-marker { display: none; }
+details > summary::before { content: '▶ '; font-size: 11px; }
+details[open] > summary::before { content: '▼ '; }
+details > summary:hover { background: #27ae60; color: #fff; }
+details[open] { display: block; margin: 8px 0 12px; }
+details > img { display: block; max-width: 100%; margin: 10px 0 0; border: 1px solid #ddd; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+
 @media (max-width: 700px) {
     body { padding: 16px 12px 60px; font-size: 15px; }
     h1 { font-size: 23px; } h2 { font-size: 18px; }
@@ -88,7 +104,7 @@ code { background: #f1f3f5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 <tr>
 <td>07:30</td>
 <td>正式出發</td>
-<td>出發後<strong>右轉</strong>，前方號誌燈處<strong>迴轉</strong>接台3線</td>
+<td>出發後<strong>右轉</strong>，前方號誌燈處<strong>迴轉</strong>接台3線 <details><summary>📷 路口示意圖</summary><img src="圖1.jpg" alt="出發迴轉路口示意圖" style="max-width:100%;margin-top:8px"></details></td>
 </tr>
 <tr>
 <td>11:30</td>
@@ -280,7 +296,7 @@ code { background: #f1f3f5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 <td style="text-align: center;">1 km</td>
 <td style="text-align: center;">~07:35</td>
 <td style="text-align: center;">🚦 交管</td>
-<td>叉路口待轉、注意來車、車隊保持距離不搶快；剛出發隊伍密集，放慢速度。<br>⚠️ 補給車不易臨停，請聽從<strong>押隊鐵爸／鐵媽</strong>指示</td>
+<td>叉路口待轉、注意來車、車隊保持距離不搶快；剛出發隊伍密集，放慢速度。<br>⚠️ 補給車不易臨停，請聽從<strong>押隊鐵爸／鐵媽</strong>指示<br><details><summary>📷 路口示意圖</summary><img src="圖2.jpg" alt="大北坑關鍵路口" style="max-width:100%;margin-top:8px"></details></td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
@@ -288,7 +304,7 @@ code { background: #f1f3f5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 <td style="text-align: center;">8.3 km</td>
 <td style="text-align: center;">~08:05</td>
 <td style="text-align: center;">🚦 交管</td>
-<td>叉路口待轉、減速通過、留意前後車距；接近補給點請勿衝刺。<br>⚠️ 補給車不易臨停，請聽從<strong>押隊鐵爸／鐵媽</strong>指示</td>
+<td>叉路口待轉、減速通過、留意前後車距；接近補給點請勿衝刺。<br>⚠️ 補給車不易臨停，請聽從<strong>押隊鐵爸／鐵媽</strong>指示<br><details><summary>📷 路口示意圖</summary><img src="圖3.jpg" alt="內環山關鍵路口" style="max-width:100%;margin-top:8px"></details></td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
@@ -304,7 +320,7 @@ code { background: #f1f3f5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 <td style="text-align: center;">20 km</td>
 <td style="text-align: center;">09:20–09:30</td>
 <td style="text-align: center;">🔄 折返/補給</td>
-<td>全程折返點、約一半位置；依工作人員指示停靠、不佔用店家出入口、補水上廁所；折返時注意對向來車與隊伍方向</td>
+<td>全程折返點、約一半位置；依工作人員指示停靠、不佔用店家出入口、補水上廁所；折返時注意對向來車與隊伍方向<br><details><summary>📷 折返點示意圖</summary><img src="圖5.jpg" alt="7-11 騰達門市折返點" style="max-width:100%;margin-top:8px"></details></td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
@@ -355,7 +371,7 @@ code { background: #f1f3f5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 </tr>
 <tr>
 <td>🚧 <strong>施工路段</strong></td>
-<td>領隊將提前廣播；全隊<strong>減速慢行</strong>、<strong>單線依序通過</strong>；必要時下車<strong>牽車</strong>；雨天路面濕滑須加倍謹慎。<br>押隊鐵爸／鐵媽會殿後，<strong>確認全組通過後再前進</strong></td>
+<td>領隊將提前廣播；全隊<strong>減速慢行</strong>、<strong>單線依序通過</strong>；必要時下車<strong>牽車</strong>；雨天路面濕滑須加倍謹慎。<br>押隊鐵爸／鐵媽會殿後，<strong>確認全組通過後再前進</strong><br><details><summary>📷 施工路段現況</summary><img src="圖4.jpg" alt="施工路段現況" style="max-width:100%;margin-top:8px"></details></td>
 </tr>
 <tr>
 <td>⛰️ <strong>上坡</strong></td>
