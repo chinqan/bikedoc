@@ -38,15 +38,20 @@ code { background: #f1f3f5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 .checklist label:hover { border-color: #2980b9; background: #f7fbff; }
 .checklist input[type="checkbox"] { width: 18px; height: 18px; accent-color: #2980b9; cursor: pointer; flex-shrink: 0; }
 .checklist label:has(input:checked) { background: #f0f8ff; border-color: #2980b9; opacity: .7; text-decoration: line-through; }
+.overview-row { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; align-items: start; margin: 14px 0 18px; }
+.overview-text p { margin: 0 0 10px; }
+.slogan-card { background: linear-gradient(135deg, #2980b9 0%, #1a5276 100%); color: #fff; border-radius: 12px; padding: 20px 22px; box-shadow: 0 6px 20px rgba(0,0,0,.16); }
+.slogan-title { font-size: 17px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid rgba(255,255,255,.35); letter-spacing: 1px; }
+.slogan-card ol { margin: 0; padding-left: 22px; }
+.slogan-card li { margin-bottom: 6px; font-weight: 600; font-size: 15px; }
+.sweeper { color: #c0392b; font-weight: 700; background: #fdecea; padding: 2px 8px; border-radius: 4px; white-space: nowrap; display: inline-block; }
 @media (max-width: 700px) {
     body { padding: 16px 12px 60px; font-size: 15px; }
-    h1 { font-size: 23px; }
-    h2 { font-size: 18px; }
-    table { font-size: 14px; }
-    th, td { padding: 6px 8px; }
+    h1 { font-size: 23px; } h2 { font-size: 18px; }
+    table { font-size: 14px; } th, td { padding: 6px 8px; }
     iframe { height: 380px; }
-    .map-row { grid-template-columns: 1fr; }
-    .map-col iframe { height: 280px; }
+    .map-row { grid-template-columns: 1fr; } .map-col iframe { height: 280px; }
+    .overview-row { grid-template-columns: 1fr; }
 }
 </style></head>
 <body><a href="index.html" class="nav-back">← 回首頁</a>
@@ -200,49 +205,50 @@ code { background: #f1f3f5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 <tr>
 <td style="text-align: center;">第 1 組</td>
 <td style="text-align: center;"><strong>鱸鰻</strong></td>
-<td>多多、小旗魚、大豆、菓子、蘋果哥哥、仙草</td>
+<td>多多、小旗魚、大豆、菓子、蘋果哥哥、<span class="sweeper">仙草</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">第 2 組</td>
 <td style="text-align: center;"><strong>熊鷹</strong></td>
-<td>綠繡眼、獵鷹、捷豹、允豪、琉璃鳥、山獅</td>
+<td>綠繡眼、獵鷹、捷豹、允豪、琉璃鳥、<span class="sweeper">山獅</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">第 3 組</td>
 <td style="text-align: center;"><strong>羊跪妃</strong></td>
-<td>海鸚鵡、比目魚、孔雀魚、水晶魚、松果、夏威夷果、大卷尾</td>
+<td>海鸚鵡、比目魚、孔雀魚、水晶魚、松果、夏威夷果、<span class="sweeper">大卷尾</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">第 4 組</td>
 <td style="text-align: center;"><strong>高鐵</strong></td>
-<td>烏賊、胡麻柴、霸王龍、巫婆、凱蒂貓、瑪麗貓、巫師</td>
+<td>烏賊、胡麻柴、霸王龍、巫婆、凱蒂貓、瑪麗貓、<span class="sweeper">巫師</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">第 5 組</td>
 <td style="text-align: center;"><strong>荔枝</strong></td>
-<td>芒果、Julia、Mia、黑豆、紅豆、紅蜥蜴</td>
+<td>芒果、Julia、Mia、黑豆、紅豆、<span class="sweeper">紅蜥蜴</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">機動</td>
-<td style="text-align: center;"><strong>芒果乾</strong></td>
-<td>—</td>
+<td style="text-align: center;">—</td>
+<td>芒果乾</td>
 </tr>
 <tr>
 <td style="text-align: center;">補給車（1）</td>
-<td style="text-align: center;"><strong>羊來了</strong></td>
-<td>羊肉爐</td>
+<td style="text-align: center;">—</td>
+<td>羊來了、羊肉爐</td>
 </tr>
 <tr>
 <td style="text-align: center;">補給車（2）</td>
-<td style="text-align: center;"><strong>金錢豹</strong></td>
-<td>—</td>
+<td style="text-align: center;">—</td>
+<td>金錢豹</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p>📌 各組領騎請於 07:00 報到時主動集合該組成員、清點人數，並於 07:20 暖身時確認到齊。
-📌 騎乘途中請保持「領騎 — 成員 — 押隊」隊形，組與組之間保持安全距離。
-📌 <strong>黑豆</strong>（第 5 組）由家長 <strong>紅豆</strong> 全程關照（同組）。</p>
+<p>📌 <strong><span class="sweeper">紅色</span>標示者為各組押隊</strong>（殿後），由各組鐵爸或鐵媽擔任。</p>
+<p>📌 各組領騎請於 07:00 報到時主動集合該組成員、清點人數，並於 07:20 暖身時確認到齊。</p>
+<p>📌 騎乘途中請保持「領騎 — 成員 — 押隊」隊形，組與組之間保持安全距離。</p>
+<p>📌 <strong>黑豆</strong>（第 5 組）由家長 <strong>紅豆</strong> 全程關照（同組）。</p>
 </blockquote>
 <hr />
 <h2>四、飛騎地圖（請於前一晚 LINE 群組轉發）</h2>

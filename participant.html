@@ -38,15 +38,20 @@ code { background: #f1f3f5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 .checklist label:hover { border-color: #27ae60; background: #f7fbff; }
 .checklist input[type="checkbox"] { width: 18px; height: 18px; accent-color: #27ae60; cursor: pointer; flex-shrink: 0; }
 .checklist label:has(input:checked) { background: #f0f8ff; border-color: #27ae60; opacity: .7; text-decoration: line-through; }
+.overview-row { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; align-items: start; margin: 14px 0 18px; }
+.overview-text p { margin: 0 0 10px; }
+.slogan-card { background: linear-gradient(135deg, #27ae60 0%, #186a3b 100%); color: #fff; border-radius: 12px; padding: 20px 22px; box-shadow: 0 6px 20px rgba(0,0,0,.16); }
+.slogan-title { font-size: 17px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid rgba(255,255,255,.35); letter-spacing: 1px; }
+.slogan-card ol { margin: 0; padding-left: 22px; }
+.slogan-card li { margin-bottom: 6px; font-weight: 600; font-size: 15px; }
+.sweeper { color: #c0392b; font-weight: 700; background: #fdecea; padding: 2px 8px; border-radius: 4px; white-space: nowrap; display: inline-block; }
 @media (max-width: 700px) {
     body { padding: 16px 12px 60px; font-size: 15px; }
-    h1 { font-size: 23px; }
-    h2 { font-size: 18px; }
-    table { font-size: 14px; }
-    th, td { padding: 6px 8px; }
+    h1 { font-size: 23px; } h2 { font-size: 18px; }
+    table { font-size: 14px; } th, td { padding: 6px 8px; }
     iframe { height: 380px; }
-    .map-row { grid-template-columns: 1fr; }
-    .map-col iframe { height: 280px; }
+    .map-row { grid-template-columns: 1fr; } .map-col iframe { height: 280px; }
+    .overview-row { grid-template-columns: 1fr; }
 }
 </style></head>
 <body><a href="index.html" class="nav-back">← 回首頁</a>
@@ -104,17 +109,23 @@ code { background: #f1f3f5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 </blockquote>
 <hr />
 <h2>三、騎乘路線總覽</h2>
+<div class="overview-row">
+<div class="overview-text">
 <p>本次活動路線以 <strong>龍潭大池</strong> 為起終點，沿台3線及周邊山區道路騎乘，途中經過大北坑、內環山、國道三號路橋下、7-11 騰達門市、濟世宮、中油正新站等地點，最後返回龍潭大池。</p>
 <p>全程約 <strong>41 km</strong>，路線具有山區起伏，並設有多個補給點、折返點與交通管制提醒點。</p>
 <p><strong>本次活動分為 5 組 + 機動組 + 補給車，請依分組行進，詳見下方分組名單。</strong></p>
-<p>活動重點：</p>
-<ul>
-<li>安全完成騎乘</li>
-<li>團體行進、互相照應</li>
-<li>遵守交通規則</li>
-<li>聽從交管與工作人員指示</li>
-<li>不競速、不搶快</li>
-</ul>
+</div>
+<aside class="slogan-card">
+<div class="slogan-title">🚴 活動五大原則</div>
+<ol>
+    <li>安全完成騎乘</li>
+    <li>團體行進、互相照應</li>
+    <li>遵守交通規則</li>
+    <li>聽從交管與工作人員</li>
+    <li>不競速、不搶快</li>
+  </ol>
+</aside>
+</div>
 <hr />
 <h2>四、分組名單</h2>
 <table>
@@ -129,49 +140,51 @@ code { background: #f1f3f5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 <tr>
 <td style="text-align: center;">第 1 組</td>
 <td style="text-align: center;"><strong>鱸鰻</strong></td>
-<td>多多、小旗魚、大豆、菓子、蘋果哥哥、仙草</td>
+<td>多多、小旗魚、大豆、菓子、蘋果哥哥、<span class="sweeper">仙草</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">第 2 組</td>
 <td style="text-align: center;"><strong>熊鷹</strong></td>
-<td>綠繡眼、獵鷹、捷豹、允豪、琉璃鳥、山獅</td>
+<td>綠繡眼、獵鷹、捷豹、允豪、琉璃鳥、<span class="sweeper">山獅</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">第 3 組</td>
 <td style="text-align: center;"><strong>羊跪妃</strong></td>
-<td>海鸚鵡、比目魚、孔雀魚、水晶魚、松果、夏威夷果、大卷尾</td>
+<td>海鸚鵡、比目魚、孔雀魚、水晶魚、松果、夏威夷果、<span class="sweeper">大卷尾</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">第 4 組</td>
 <td style="text-align: center;"><strong>高鐵</strong></td>
-<td>烏賊、胡麻柴、霸王龍、巫婆、凱蒂貓、瑪麗貓、巫師</td>
+<td>烏賊、胡麻柴、霸王龍、巫婆、凱蒂貓、瑪麗貓、<span class="sweeper">巫師</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">第 5 組</td>
 <td style="text-align: center;"><strong>荔枝</strong></td>
-<td>芒果、Julia、Mia、黑豆、紅豆、紅蜥蜴</td>
+<td>芒果、Julia、Mia、黑豆、紅豆、<span class="sweeper">紅蜥蜴</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">機動</td>
-<td style="text-align: center;"><strong>芒果乾</strong></td>
-<td>—</td>
+<td style="text-align: center;">—</td>
+<td>芒果乾</td>
 </tr>
 <tr>
 <td style="text-align: center;">補給車（1）</td>
-<td style="text-align: center;"><strong>羊來了</strong></td>
-<td>羊肉爐</td>
+<td style="text-align: center;">—</td>
+<td>羊來了、羊肉爐</td>
 </tr>
 <tr>
 <td style="text-align: center;">補給車（2）</td>
-<td style="text-align: center;"><strong>金錢豹</strong></td>
-<td>—</td>
+<td style="text-align: center;">—</td>
+<td>金錢豹</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p>📌 各組請於 07:00 報到時主動找到自己的領騎集合、清點人數。
-📌 騎乘途中請保持「<strong>領騎 — 成員 — 押隊</strong>」隊形，組與組之間保持安全距離。
-📌 通過<strong>交管／施工段</strong>時，請聽從押隊鐵爸／鐵媽指示，確保全組安全通過再前進。</p>
+<p>📌 <strong><span class="sweeper">紅色</span>標示者為各組押隊</strong>（殿後），由各組鐵爸或鐵媽擔任。</p>
+<p>📌 各組請於 07:00 報到時主動找到自己的領騎集合、清點人數。</p>
+<p>📌 騎乘途中請保持「<strong>領騎 — 成員 — 押隊</strong>」隊形，組與組之間保持安全距離。</p>
+<p>📌 通過<strong>交管／施工段</strong>時，請聽從押隊鐵爸／鐵媽指示，確保全組安全通過再前進。</p>
+<p>📌 <strong>特殊關照：</strong> <strong>黑豆</strong>（第 5 組）由家長 <strong>紅豆</strong>（同組）全程關照，請相關家長協助留意。</p>
 </blockquote>
 <hr />
 <h2>五、路線地圖與導航</h2>
@@ -196,70 +209,43 @@ code { background: #f1f3f5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 <p>🛰️ 另提供 GPX 軌跡檔 <a href="台3線車訓路線.gpx" download>台3線車訓路線.gpx</a>，可匯入 Strava／Garmin／Komoot 等 App。</p>
 </blockquote>
 <hr />
-<h2>六、行程與補給安排</h2>
+<h2>六、沿途補給時間</h2>
+<blockquote>
+<p>起點／終點時間請參考 §二，本表聚焦<strong>途中補給點</strong>。</p>
+</blockquote>
 <table>
 <thead>
 <tr>
 <th>預計時間</th>
 <th style="text-align: right;">里程</th>
 <th>地點</th>
-<th>說明</th>
+<th>類型</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>07:00</td>
-<td style="text-align: right;">0 km</td>
-<td>龍潭大池右側停車場</td>
-<td>報到集合</td>
-</tr>
-<tr>
-<td>07:20</td>
-<td style="text-align: right;">0 km</td>
-<td>龍潭大池</td>
-<td>暖身操、拍照</td>
-</tr>
-<tr>
-<td>07:30</td>
-<td style="text-align: right;">0 km</td>
-<td>龍潭大池</td>
-<td>正式出發</td>
-</tr>
-<tr>
 <td>08:10～08:20</td>
 <td style="text-align: right;">9 km</td>
 <td>國道三號路橋下</td>
-<td>補給點1（去程）</td>
+<td>🥤 補給點1（去程）</td>
 </tr>
 <tr>
 <td>09:20～09:30</td>
 <td style="text-align: right;">20 km</td>
 <td>7-11 騰達門市</td>
-<td>補給＋折返點</td>
+<td>🔄 補給＋折返點</td>
 </tr>
 <tr>
 <td>10:00～10:10</td>
 <td style="text-align: right;">28.5 km</td>
 <td>濟世宮</td>
-<td>補給點2（回程）</td>
+<td>🥤 補給點2（回程）</td>
 </tr>
 <tr>
 <td>10:40～10:50</td>
 <td style="text-align: right;">35 km</td>
 <td>中油正新站</td>
-<td>補給點3（回程）</td>
-</tr>
-<tr>
-<td>11:30</td>
-<td style="text-align: right;">41 km</td>
-<td>龍潭大池</td>
-<td>返回終點、午餐</td>
-</tr>
-<tr>
-<td>12:00</td>
-<td style="text-align: right;">41 km</td>
-<td>龍潭大池停車場後方</td>
-<td>全員集合、慶生</td>
+<td>🥤 補給點3（回程）</td>
 </tr>
 </tbody>
 </table>
@@ -347,44 +333,10 @@ code { background: #f1f3f5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 </tbody>
 </table>
 <hr />
-<h2>八、補給車與工作人員</h2>
-<h3>補給車負責人</h3>
-<p>補給車由 <strong>羊來了</strong> 及 <strong>金錢豹</strong> 負責，沿途提供水、飲料及冰塊。</p>
-<ul>
-<li>考量天氣炎熱，將準備 <strong>2 組冰桶</strong>，分別置於補給車</li>
-<li>若途中棄賽或機械故障，請聯絡補給車</li>
-</ul>
+<h2>八、補給車說明</h2>
+<p>由 <strong>羊來了</strong>、<strong>金錢豹</strong> 負責，沿途提供水、飲料及冰塊（<strong>2 組冰桶</strong>分別置於補給車）。途中體力不支或機械故障時，可請補給車接送。</p>
 <hr />
-<h2>九、特殊關照成員</h2>
-<ul>
-<li><strong>黑豆</strong>（第 5 組）由家長 <strong>紅豆</strong>（同組）全程關照，請相關家長協助留意。</li>
-</ul>
-<hr />
-<h2>十、路線難度與騎乘提醒</h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>內容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>📏 <strong>總里程</strong></td>
-<td>約 <strong>41 km</strong>，非完全平路</td>
-</tr>
-<tr>
-<td>🏔️ <strong>路線特色</strong></td>
-<td>中長距離騎乘、山區道路起伏、多處叉路口、多個交通會合點、補給點間距約 6～11 km</td>
-</tr>
-<tr>
-<td>🚴 <strong>建議騎乘能力</strong></td>
-<td>能穩定騎乘 20 km 以上、具備基本變速能力、能控制上下坡速度、會保持安全車距、能遵守團騎規則與交管指示</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2>十一、安全注意事項</h2>
+<h2>九、安全與團騎規則</h2>
 <table>
 <thead>
 <tr>
@@ -417,10 +369,14 @@ code { background: #f1f3f5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 <td>💧 <strong>補水／體力</strong></td>
 <td>不要等到口渴才喝水：出發前先喝水、途中適量補水、每個補給點檢查水量。<br>若有頭暈、抽筋、噁心或體力不支，請<strong>立即告知工作人員</strong></td>
 </tr>
+<tr>
+<td>👥 <strong>團騎規則</strong></td>
+<td>不任意超越領騎、不落後押隊太遠、保持安全車距、不突然煞車或變換方向；停車先靠邊並提醒後方；發現他人有狀況請通知工作人員；補給點集合後依工作人員指示再出發</td>
+</tr>
 </tbody>
 </table>
 <hr />
-<h2>十二、雨天備案</h2>
+<h2>十、雨天備案</h2>
 <ul>
 <li>主辦單位於活動前一日（5/23）晚間 20:00 前依氣象預報決定是否照常舉行，並於 LINE 群組統一公告。</li>
 <li>請所有參加者自備<strong>騎行雨具</strong>，以備不時之需。</li>
@@ -429,7 +385,7 @@ code { background: #f1f3f5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 <li><strong>小鐵人精神：</strong> 在可安全行進的情況下，盡力完成訓練挑戰！</li>
 </ul>
 <hr />
-<h2>十三、途中棄賽或身體不適處理</h2>
+<h2>十一、途中棄賽或身體不適處理</h2>
 <p>若參加者途中體力不支或機械故障，請：</p>
 <ol>
 <li>告知身旁隊員或工作人員</li>
@@ -438,7 +394,7 @@ code { background: #f1f3f5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 <li>由補給車載送單車及人員返回龍潭大池</li>
 </ol>
 <hr />
-<h2>十四、參加者自備物品</h2>
+<h2>十二、參加者自備物品</h2>
 <p>請於出發前自行檢核，務必確認<strong>雨具</strong>已攜帶。</p>
 <div class="checklist">
   <label><input type="checkbox"> 💧 水壺</label>
@@ -455,7 +411,7 @@ code { background: #f1f3f5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 
 <p>特別提醒：雖然活動設有補給點，但仍請每位參加者自備足夠飲水與基本維修用品。</p>
 <hr />
-<h2>十五、單車檢查建議</h2>
+<h2>十三、單車檢查建議</h2>
 <p>活動前請先完成基本車況檢查，逐項確認：</p>
 <div class="checklist">
   <label><input type="checkbox"> 🛑 <strong>煞車</strong>：前後煞車正常、煞車皮未過度磨損</label>
@@ -466,28 +422,11 @@ code { background: #f1f3f5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 </div>
 
 <hr />
-<h2>十六、團騎規則</h2>
-<p>為確保所有參加者安全，請遵守以下團騎規則：</p>
-<ol>
-<li>聽從領騎、押隊及交管人員指示。</li>
-<li>不任意超越領騎。</li>
-<li>不落後押隊太遠。</li>
-<li>騎乘時保持安全車距。</li>
-<li>不突然煞車或變換方向。</li>
-<li>需要停車時，請先靠邊並提醒後方。</li>
-<li>發現其他隊員有狀況，請協助通知工作人員。</li>
-<li>補給點集合後，依工作人員指示再出發。</li>
-</ol>
-<hr />
-<h2>十七、簡版行前提醒</h2>
-<p>出發前請確認：</p>
+<h2>十四、出發前最後檢查</h2>
 <div class="checklist">
-  <label><input type="checkbox"> 📱 已下載飛騎路線（或備援 GPX）</label>
-  <label><input type="checkbox"> 🚲 單車狀況正常（煞車、胎壓、變速、鏈條、車燈）</label>
+  <label><input type="checkbox"> 📱 飛騎路線已加入 App（或備援 GPX）</label>
   <label><input type="checkbox"> 💧 水壺已裝滿</label>
-  <label><input type="checkbox"> 🛠️ 已攜帶內胎、工具</label>
-  <label><input type="checkbox"> ☔ <strong>雨具已攜帶</strong></label>
-  <label><input type="checkbox"> 👕 穿著適合騎乘的服裝與鞋子</label>
+  <label><input type="checkbox"> ☔ <strong>雨具已放入車包</strong></label>
   <label><input type="checkbox"> ⏰ <strong>07:00 抵達龍潭大池．貴族世家餐廳右側停車場</strong></label>
 </div>
 
